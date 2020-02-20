@@ -1,0 +1,39 @@
+.hero {
+    display: grid;
+    grid-column: 2 / span 4;
+    margin-top: 10rem;
+    align-items: center;
+    justify-content: center;
+
+    .model {
+        height: 50vh;
+        width: 60vw;
+        background-color: $color-bg-white;
+        border-radius: 1rem;
+
+        &_divider {
+            height: 2rem;
+            background-color: $color-primary-yellow-dark;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+        }
+
+        &_nav {
+            background-color: $color-primary-yellow;
+            height: 4rem;
+            padding: 0 10rem;
+        }
+
+        .navbar-nav {
+            display: flex;
+            flex-direction: row;
+            margin-right: 3rem;
+        }
+
+        .nav-item {
+            margin-right: 2.5rem;
+            // height: 3rem;
+            // width: 3rem;
+        }
+    }
+}
