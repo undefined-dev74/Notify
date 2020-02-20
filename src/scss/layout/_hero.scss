@@ -20,8 +20,46 @@
 
         &_nav {
             background-color: $color-primary-yellow;
-            height: 4rem;
+            height: 4.5rem;
             padding: 0 10rem;
+
+            a {
+                color: $pixel-dark;
+                text-decoration: none;
+                background-color: transparent;
+
+            }
+        }
+
+        &_brand {
+            font-family: $font-primary;
+            font-weight: 600;
+        }
+
+        &_search {
+            width: 100%;
+
+            font-size: 1.3rem;
+            line-height: 1.5rem;
+            border-radius: 3rem;
+            padding: 0 7rem;
+            background-color: $color-primary-yellow-dark;
+            outline: none;
+            border: none;
+
+            &:focus,
+            &:active {
+                outline: none;
+                background-color: inherit;
+            }
+
+            &::placeholder {
+                color: $pixel-dark;
+                font-family: $font-primary;
+                font-weight: 600;
+            }
+
+            
         }
 
         .navbar-nav {
@@ -30,10 +68,12 @@
             margin-right: 3rem;
         }
 
+        .navbar-brand {
+            font-size: 1.35rem;
+        }
+
         .nav-item {
-            margin-right: 2.5rem;
-            // height: 3rem;
-            // width: 3rem;
+            margin-right: 2.1rem;
         }
     }
 }
