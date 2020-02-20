@@ -1,0 +1,24 @@
+textarea.form-control {
+    margin: 0 auto;
+    width: 40rem;
+    height: 5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: $font-primary;
+    line-height: 1.5;
+    text-transform: lowercase   ;
+    color: $dark-black;
+    background-color: $primary-grey;
+    background-clip: padding-box;
+    border: 1px solid $color-bg-white;
+    border-radius: 1.2rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    z-index: 5;
+    margin-top: 3rem;
+    padding: .8rem 0 .8rem 3rem;
+
+    &:active,
+    &:focus {
+        // bgc
+    }
+}
