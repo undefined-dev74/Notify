@@ -1,6 +1,7 @@
 const isDevelopment = process.env.NODE_ENV === 'development';
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const htmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack'); // to access built-in programs
 const path = require('path');
 module.exports = {
@@ -44,5 +45,5 @@ module.exports = {
             filename: isDevelopment ? '[name].css' : '[name].[hash].css',
             chunkFilename: isDevelopment ? '[id].css' : '[id].[hash].css'
         })
-    ],
-};
+    ]    
+}
