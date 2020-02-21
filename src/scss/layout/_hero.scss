@@ -27,10 +27,28 @@
                 color: $pixel-dark;
                 text-decoration: none;
                 background-color: transparent;
-
             }
         }
+        &_form {
 
+           div.search_icon {
+                position: relative;
+
+                i {
+                    position: absolute;
+                    top: 1.2rem;
+                    bottom: 0;
+                    transform: translate(6rem, 0);
+                }
+            }
+            input {
+                font-family: $font-primary;
+                font-size: 1.4rem;
+                color: $pixel-dark;
+                font-weight: 600;
+                text-transform: capitalize;
+            }
+        }
         &_brand {
             font-family: $font-primary;
             font-weight: 600;
@@ -38,25 +56,27 @@
 
         &_search {
             width: 100%;
-
             font-size: 1.3rem;
             line-height: 1.5rem;
             border-radius: 3rem;
-            padding: 1rem 7rem;
+            padding: 1rem 6rem 1rem 8rem;
             background-color: $color-primary-yellow-dark;
-            outline: none;
             border: none;
 
             &:focus,
             &:active {
                 outline: none;
                 background-color: inherit;
+                border: none;
+
             }
 
             &::placeholder {
+                text-align: start;
                 color: $pixel-dark;
                 font-family: $font-primary;
-                font-weight: 600;
+                font-weight: 400;
+                padding: 0;
             }
 
             
