@@ -1,6 +1,7 @@
 .notegroup {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     margin: .8rem auto;
 
     width: 50%;
@@ -17,16 +18,22 @@
     &_nav {
         display: flex;
         flex-direction: row;
+        margin-bottom: 0;
+
+        ul {
+            margin-bottom: 0;
+        }
 
         li {
             list-style: none;
-
         }
+
         &-icons {
             display: flex;
             justify-self: space-evenly;
-           margin: .4rem .4rem;
+            margin: .4rem .4rem;
             color: $primary-grey;
         }
     }
+
 }
