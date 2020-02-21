@@ -10,15 +10,17 @@ textarea.form-control {
     color: $dark-black;
     background-color: $primary-grey;
     background-clip: padding-box;
-    border: 1px solid $color-bg-white;
+    border: 1px solid $primary-grey;
     border-radius: 1.2rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     z-index: 5;
-    margin-top: 3rem;
-    padding: .8rem 0 .8rem 3rem;
+    margin-top: .3rem;
+    padding: 1rem 0 1rem 3rem;
+    resize: none;
 
     &:active,
     &:focus {
-        // bgc
+        background-color: $primary-grey;
+        border: 2px solid $color-primary-yellow-dark;
     }
 }
