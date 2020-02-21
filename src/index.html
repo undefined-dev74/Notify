@@ -8,7 +8,9 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800|Poppins:400,500,600,800|Raleway:400,600,700,800&display=swap" rel="stylesheet">
     <!-- fontawesome CDN -->
     <script src="https://kit.fontawesome.com/4191aa9ac9.js" crossorigin="anonymous" ></script>
+    <link rel="stylesheet" href="./assets/icons/flaticon.css">
     <title>EditNoter</title>
+
 </head>
 
 <body style="background-color: #cccccc;">
@@ -20,10 +22,10 @@
                     Edittor
                     <i class=" model_brand-icon fas fa-pen-square"></i>
                 </a>
-                <div class=" model_form form-group mb-0 d-flex ">
-                    <div class=" search-icon">
-                        <!-- <i class="fas fa-search"></i> -->
-                    <input type="email" class="model_search form-control " id="search" placeholder="Search anything">
+                <div class=" model_form form-group mb-0">
+                    <div class=" search_icon">
+                        <i class= " search_icon-i fas fa-search"></i>
+                    <input type="search" class="model_search form-control " id="search" placeholder="Search anything">
                     </div>
                 </div>
                 <ul class="navbar-nav">
@@ -38,6 +40,16 @@
                     </li>
                 </ul>
             </nav>
+            <div class="notegroup">
+                <h1 class="notegroup_headline">Today</h1>
+                <ul class="notegroup_nav">
+
+                    <li class="notegroup_nav-icons"><i class=" fas fa-sun"></i></li>
+                    <li class="notegroup_nav-icons"><i class=" fas fa-user-tag"></i></li>
+                    <li class="notegroup_nav-icons"><i class=" fas fa-ellipsis-h"></i></li>
+
+                </ul>
+            </div>
          <textarea class="form-control shadow-lg" rows="1" aria-label="With textarea" placeholder="write a note or paste a link"></textarea>
 
         </div>
