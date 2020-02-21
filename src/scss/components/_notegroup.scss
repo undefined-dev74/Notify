@@ -1,0 +1,32 @@
+.notegroup {
+    display: flex;
+    justify-content: space-around;
+    margin: .8rem auto;
+
+    width: 50%;
+
+    &_headline {
+        display: flex;
+        flex-direction: row;
+        font-family: $font-primary;
+        font-weight: 600;
+        font-size: 1.6rem;
+        text-align: end;
+    }
+
+    &_nav {
+        display: flex;
+        flex-direction: row;
+
+        li {
+            list-style: none;
+
+        }
+        &-icons {
+            display: flex;
+            justify-self: space-evenly;
+           margin: .4rem .4rem;
+            color: $primary-grey;
+        }
+    }
+}
