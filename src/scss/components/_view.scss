@@ -1,0 +1,17 @@
+.view {
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    word-wrap: break-word;
+    background-clip: border-box;
+    background-color: $smoke-white;
+    width: 40rem;
+    height: auto;
+    color: $pixel-dark;
+    font-family: $font-trisary;
+    font-weight: 600;
+    border-radius: 1.3rem;
+    padding: 1.6rem 1.6rem;
+}
