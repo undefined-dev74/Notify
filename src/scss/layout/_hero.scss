@@ -6,7 +6,7 @@
     justify-content: center;
 
     .model {
-        height: 50vh;
+        height: auto;
         width: 60vw;
         background-color: $color-bg-white;
         border-radius: 1rem;
@@ -38,7 +38,7 @@
                     position: absolute;
                     top: 1.2rem;
                     bottom: 0;
-                    transform: translate(6rem, 0);
+                    transform: translate(14.6rem, 0);
                 }
             }
             input {
@@ -47,6 +47,7 @@
                 color: $pixel-dark;
                 font-weight: 600;
                 text-transform: capitalize;
+                margin-left: 3.5rem;
             }
         }
         &_brand {
@@ -77,6 +78,7 @@
                 font-family: $font-primary;
                 font-weight: 400;
                 padding: 0;
+                text-align: center;
             }
 
             
