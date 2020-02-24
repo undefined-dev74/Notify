@@ -14,4 +14,40 @@
     font-weight: 600;
     border-radius: 1.3rem;
     padding: 1.6rem 1.6rem;
+    h5, p, label, input {
+        margin-left: 2rem;
+    }
+
+
+    &-title {
+        font-family: $font-secondary;
+        font-weight: 800;
+        text-transform: capitalize;
+        font-size: 1.5rem;
+        margin: 1rem 0 0.5rem 1rem;
+    }
+
+    a {
+        margin: 0 0 1rem 2rem;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &-items {
+        display: flex;
+        position: relative;
+        align-items: flex-start;
+        input[type='checkbox'] {
+            position: absolute;
+            top: 0;
+        }
+
+        &-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+            font-family: $font-primary;
+            
+        }
+    }
 }
