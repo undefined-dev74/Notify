@@ -1,26 +1,46 @@
-textarea.form-control {
-    margin: 0 auto;
+.form_group {
+    position: relative;
     width: 40rem;
-    height: 5rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-    font-family: $font-primary;
-    line-height: 1.5;
-    text-transform: lowercase   ;
-    color: $dark-black;
-    background-color: $primary-grey;
-    background-clip: padding-box;
-    border: 1px solid $primary-grey;
-    border-radius: 1.2rem;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    z-index: 5;
-    margin-top: .3rem;
-    padding: 1rem 0 1rem 3rem;
-    resize: none;
-
-    &:active,
-    &:focus {
+    margin: 0 auto;
+            
+    textarea.form-control {
+        height: 5rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        font-family: $font-primary;
+        line-height: 1.5;
+        text-transform: lowercase;
+        color: $dark-black;
         background-color: $primary-grey;
-        border: 2px solid $color-primary-yellow-dark;
+        background-clip: padding-box;
+        border: 1px solid $primary-grey;
+        border-radius: 1.2rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        z-index: 5;
+        margin-top: .3rem;
+        padding: 1rem 0 1rem 3rem;
+        resize: none;
+
+        &::placeholder,
+         {
+            transform: translate(0, .5rem);
+        }
+
+        &:active,
+        &:focus {
+            background-color: $primary-grey;
+            border: 2px solid $color-primary-yellow;
+        }
+
+
+        
+    }
+     
+    &-icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-1.5rem , 1.5rem);
+        color: $color-primary-yellow-dark;
     }
 }
