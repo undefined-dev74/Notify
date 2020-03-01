@@ -24,15 +24,14 @@
             margin-bottom: 0;
         }
 
-        li {
-            list-style: none;
-        }
+       
 
         &-icons {
             display: flex;
             justify-self: space-evenly;
             margin: .4rem .4rem;
             color: $primary-grey;
+            cursor: pointer;
         }
     }
 

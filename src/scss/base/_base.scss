@@ -18,10 +18,9 @@ html{
 body {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    height: 85vh;
+    height: 85vh;    
+}
 
-    font-family: 'Font Awesome 5 Free'; 
-    .container {
-        background-color: $primary-body-color;
-    }
+li {
+    list-style: none;
 }

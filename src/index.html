@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Font API's -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800|Poppins:400,500,600,800|Raleway:400,600,700,800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800|Poppins:400,500,600,800|Raleway:400,600,700,800&display=swap"
+        rel="stylesheet">
     <!-- fontawesome CDN -->
-    <script src="https://kit.fontawesome.com/4191aa9ac9.js" crossorigin="anonymous" ></script>
+    <script src="https://kit.fontawesome.com/4191aa9ac9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/icons/flaticon.css">
     <title>EditNoter</title>
 
@@ -24,8 +26,9 @@
                 </a>
                 <div class=" model_form form-group mb-0">
                     <div class=" search_icon">
-                        <i class= " search_icon-i fas fa-search"></i>
-                    <input type="search" class="model_search form-control " id="search" placeholder="Search anything">
+                        <i class=" search_icon-i fas fa-search"></i>
+                        <input type="search" class="model_search form-control " id="search"
+                            placeholder="Search anything">
                     </div>
                 </div>
                 <ul class="navbar-nav">
@@ -47,11 +50,28 @@
                     <li class="notegroup_nav-icons"><i class=" fas fa-sun"></i></li>
                     <li class="notegroup_nav-icons"><i class=" fas fa-user-tag"></i></li>
                     <li class="notegroup_nav-icons"><i class=" fas fa-ellipsis-h"></i></li>
-
                 </ul>
             </div>
-         <textarea class="form-control shadow-lg" rows="1" aria-label="With textarea" placeholder="write a note or paste a link"></textarea>
-
+            <div class="form_group">
+                <textarea class="form-control shadow-sm" rows="1" aria-label="With textarea"
+                    placeholder="write a note or paste a link"></textarea>
+                <i class="form_group-icon fas fa-2x fa-plus-circle"></i>
+            </div>
+            <section class="container p-0 m-0">
+                <div class="view shadow-lg">
+                    <div class="view-body">
+                        <div class="view-items custom-control custom-checkbox">
+                            <li>
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="view-items-text custom-control-label" for="customCheck1" >Buy
+                                Groceries</label>
+                            </li>
+                            <h6 class="view-today">Today</h6>
+                            <h6 class="view-time">6:00am</h6>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </section>
     <script src=""></script>

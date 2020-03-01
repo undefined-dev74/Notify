@@ -31,9 +31,6 @@
             background-color: $primary-grey;
             border: 2px solid $color-primary-yellow;
         }
-
-
-        
     }
      
     &-icon {
@@ -42,5 +39,6 @@
         right: 0;
         transform: translate(-1.5rem , 1.5rem);
         color: $color-primary-yellow-dark;
+        cursor: pointer;
     }
 }
