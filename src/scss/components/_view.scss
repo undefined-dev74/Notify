@@ -1,8 +1,8 @@
 .view {
     margin: 0 auto;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     position: relative;
     word-wrap: break-word;
     background-clip: border-box;
@@ -13,41 +13,40 @@
     font-family: $font-trisary;
     font-weight: 600;
     border-radius: 1.3rem;
-    padding: 1.6rem 1.6rem;
+    padding: 1rem .6rem 1rem 1rem;
+    align-items: center;
+    &-body {}
     h5, p, label, input {
         margin-left: 2rem;
     }
 
-
-    &-title {
-        font-family: $font-secondary;
-        font-weight: 800;
-        text-transform: capitalize;
-        font-size: 1.5rem;
-        margin: 1rem 0 0.5rem 1rem;
-    }
-
-    a {
-        margin: 0 0 1rem 2rem;
-        &:hover {
-            text-decoration: none;
-        }
-    }
-
     &-items {
-        display: flex;
-        position: relative;
-        align-items: flex-start;
-        input[type='checkbox'] {
-            position: absolute;
-            top: 0;
-        }
 
+        
         &-text {
-            font-size: 1.2rem;
+            display: block;
+            font-size: 1.3rem;
             font-weight: 600;
             font-family: $font-primary;
-            
+            margin-bottom: .3rem;
         }
+
+        h6:not(:last-child) {
+            margin: .5rem .3rem .5rem 2rem;
+        }
+
     }
+
+    &-today, &-time {
+        display: inline-block;
+        font-family: $font-secondary;
+        font-weight: 600;
+        font-size: .9rem;
+
+    }
+
+    &-time {
+        font-family: $font-primary;
+    }
+    
 }
