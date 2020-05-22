@@ -1,33 +1,29 @@
 import React from 'react';
 
 class ViewGroup extends React.Component {
-
-    constructor(props) {
-        super(props)
-        const {text , key} = props;
-    }
+	constructor(props) {
+		super(props);
+		const { text, key } = props;
+	}
 	render() {
 		return (
-			<section className="container p-0 m-0">
+			<section className="container">
 				<div className="view shadow-lg">
-					<div className="view-body">
-						<div className="view-items custom-control custom-checkbox">
-							<li>
-								<input
-									type="checkbox"
-									className="custom-control-input"
-									id="customCheck1"
-								/>
-								<label
-									className="view-items-text custom-control-label"
-									htmlFor="customCheck1">
-									{this.props.text}
-								</label>
-							</li>
-							<h6 className="view-today">Today</h6>
-							<h6 className="view-time">6:00am</h6>
+						<div className="view-items">
+							<h3 className="view-items-text">Wash car Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, ut!</h3>
 						</div>
-					</div>
+						<div className="view-timeline ">
+							<p className="view-today mr-2">Today</p>
+							<p className="view-time">6:00am</p>
+						</div>
+						<div className="view_icons">
+							<span className="mx-2 text-success">
+								<i className="fas fa-pen"></i>
+							</span>
+							<span className="mx-2 text-danger">
+								<i className="fas fa-trash"></i>
+							</span>
+						</div>
 				</div>
 			</section>
 		);

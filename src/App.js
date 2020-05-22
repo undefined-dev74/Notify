@@ -6,14 +6,22 @@ import ViewGroup from './components/ViewGroup';
 import 'bootstrap/dist/css/bootstrap.css';
 
 class App extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			list: [],
+	
+		state = {
+			items: [],
 			key: '',
+			item : '',
+			editItem : false
 		};
-	}
+	
 
+	onInputChange = (e) => {
+		this.setState({
+			item: e.target.value
+		})
+
+		console.log()
+	};
 	render() {
 		return (
 			<div className="App">
@@ -22,7 +30,7 @@ class App extends React.Component {
 						<div className="model_divider"></div>
 						<Navbar />
 						<Notegroup />
-						<FormGroup />
+						<FormGroup item={this.state.item} handleInputChange = {this.onInputChange}/>
 						<ViewGroup />
 					</div>
 				</section>
@@ -30,5 +38,4 @@ class App extends React.Component {
 		);
 	}
 }
-
 export default App;
