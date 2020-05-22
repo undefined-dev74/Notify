@@ -1,0 +1,52 @@
+.view {
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    word-wrap: break-word;
+    background-clip: border-box;
+    background-color: $smoke-white;
+    width: 40rem;
+    height: auto;
+    color: $pixel-dark;
+    font-family: $font-trisary;
+    font-weight: 600;
+    border-radius: 1.3rem;
+    padding: 1rem .6rem 1rem 1rem;
+    align-items: center;
+    &-body {}
+    h5, p, label, input {
+        margin-left: 2rem;
+    }
+
+    &-items {
+
+        
+        &-text {
+            display: block;
+            font-size: 1.3rem;
+            font-weight: 600;
+            font-family: $font-primary;
+            margin-bottom: .3rem;
+        }
+
+        h6:not(:last-child) {
+            margin: .5rem .3rem .5rem 2rem;
+        }
+
+    }
+
+    &-today, &-time {
+        display: inline-block;
+        font-family: $font-secondary;
+        font-weight: 600;
+        font-size: .9rem;
+
+    }
+
+    &-time {
+        font-family: $font-primary;
+    }
+    
+}

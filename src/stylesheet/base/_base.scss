@@ -1,0 +1,37 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%; // 1rem = 10px 10px/16px = 62.5%
+}
+
+body {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 1fr);
+	height: 85vh;
+	grid-column: 3 / span 4;
+	background: #ddd6f3; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#faf4a8,
+		#ddd6f3
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#faaca8,
+		#ddd6f3
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+li {
+	list-style: none;
+}
