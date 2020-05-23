@@ -3,7 +3,7 @@
     width: 40rem;
     margin: 0 auto;
             
-    textarea.form-control {
+    input.form-control {
         height: 5rem;
         font-size: 1.2rem;
         font-weight: 600;
@@ -24,7 +24,7 @@
 
         &::placeholder,
          {
-            transform: translate(0, .5rem);
+            transform: translate(0, 0);
         }
 
         &:active,
