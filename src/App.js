@@ -25,9 +25,9 @@ class App extends React.Component {
 
 		const newItem = {
 			id: this.state.id,
-			item: this.state.item,
+			title: this.state.item,
 		};
-		console.log(newItem);
+
 		const updatedItems = [...this.state.items, newItem];
 		console.log(updatedItems);
 
@@ -52,7 +52,7 @@ class App extends React.Component {
 							handleInputChange={this.onInputChange}
 							handleSubmit={this.handleSubmit}
 						/>
-						<ViewGroup />
+						<ViewGroup items={this.state.items}/>
 					</div>
 				</section>
 			</div>
