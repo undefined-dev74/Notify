@@ -11,12 +11,17 @@ class App extends React.Component {
 		id: Math.floor(1000 + Math.random() * 9000),
 		item: '',
 		editItem: false,
+		curTime : 0
 	};
 
 	onInputChange = (e) => {
 		this.setState ({
 			item: e.target.value,
+			curTime: new Date().toLocaleTimeString('en-US', { hour12: false, 
+				hour: "numeric", 
+				minute: "numeric"})
 		});
+		
 	};
 
 	handleSubmit = (e) => {
@@ -26,6 +31,7 @@ class App extends React.Component {
 		const newItem = {
 			id: this.state.id,
 			title: this.state.item,
+			Time : this.state.curTime
 		};
 
 		const updatedItems = [...this.state.items, newItem];
@@ -36,6 +42,7 @@ class App extends React.Component {
 			item: " ",
 			id:  Math.floor(1000 + Math.random() * 9000),
 			editItem: false,
+			curTime: new Date().toLocaleTimeString()
 		});
 	};
 

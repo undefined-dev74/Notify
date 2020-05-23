@@ -3,7 +3,7 @@ import React from 'react';
 
 export default class ViewList extends React.Component {
 	render() {
-		const { title } = this.props;
+		const { title, timeStamp } = this.props;
 		return (
 			<div className="view shadow-lg">
 				<div className="view-items">
@@ -11,7 +11,7 @@ export default class ViewList extends React.Component {
 				</div>
 				<div className="view-timeline ">
 					<p className="view-today mr-2">Today</p>
-					<p className="view-time">6:00am</p>
+					<p className="view-time">{timeStamp}</p>
 				</div>
 				<div className="view_icons">
 					<span className="mx-2 text-success">

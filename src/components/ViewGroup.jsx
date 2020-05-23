@@ -7,7 +7,7 @@ class ViewGroup extends React.Component {
 		return (
 			<section className="container">
 				{items.map((item) => {
-					return <ViewList key={item.id} title={item.title} />;
+					return <ViewList key={item.id} title={item.title} timeStamp={item.Time}/>;
 				})}
 			</section>
 		);
