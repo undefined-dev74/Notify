@@ -3,23 +3,32 @@ import React from 'react';
 
 export default class ViewList extends React.Component {
 	render() {
-		const { title, timeStamp } = this.props;
+		const { title, timeStamp, deleteItem, editItem } = this.props;
 		return (
 			<div className="view shadow-lg">
 				<div className="view-items">
 					<h3 className="view-items-text">{title}</h3>
 				</div>
-				<div className="view-timeline ">
-					<p className="view-today mr-2">Today</p>
-					<p className="view-time">{timeStamp}</p>
-				</div>
-				<div className="view_icons">
-					<span className="mx-2 text-success">
-						<i className="fas fa-pen"></i>
-					</span>
-					<span className="mx-2 text-danger">
-						<i className="fas fa-trash"></i>
-					</span>
+
+				<div className="view-items">
+					<div className="view-items-timeline ">
+						<p className="view-items-timeline-today mr-2">Today</p>
+						<p className="view-items-timeline-time">{timeStamp}</p>
+					</div>
+					<div className="view-items-icons">
+						<span className="mx-2 text-success " onClick={editItem}>
+							<button className="btn btn-sm btn-info px-3">
+								Edit
+								<i className="fas fa-pen ml-2"></i>
+							</button>
+						</span>
+						<span className="mx-2 text-danger" onClick={deleteItem}>
+							<button className="btn btn-sm btn-danger">
+								Delete
+								<i className="fas fa-trash ml-2"></i>
+							</button>
+						</span>
+					</div>
 				</div>
 			</div>
 		);
