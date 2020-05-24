@@ -1,0 +1,16 @@
+.clearlist {
+    margin: 1.2rem auto;
+    .btn-danger {
+        background-color: $color-primary-yellow-dark;
+        color: $primary-body-color;
+        border: none;
+        width: 12rem;
+        padding: 0.5rem 2rem;
+        font-size: 1.4rem;
+        font-family: $font-secondary;
+        border-radius: 0.7rem;
+    }
+}
+
+.btn-block {
+}

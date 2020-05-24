@@ -16,19 +16,19 @@ html {
 
 body {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, 1fr);
+	// grid-template-columns: repeat(auto-fill, 1fr);
 	height: 85vh;
 	grid-column: 3 / span 4;
 	background: #ddd6f3; /* fallback for old browsers */
 	background: -webkit-linear-gradient(
 		to right,
-		#faf4a8,
-		#ddd6f3
+		#202020,
+		#151618
 	); /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(
 		to right,
-		#faaca8,
-		#ddd6f3
+		#202020,
+		#151618
 	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
