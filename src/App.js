@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Notegroup from './components/NoteGroup';
 import FormGroup from './components/FormGroup';
 import ViewGroup from './components/ViewGroup';
+
 import 'bootstrap/dist/css/bootstrap.css';
 
 class App extends React.Component {
@@ -11,17 +12,18 @@ class App extends React.Component {
 		id: Math.floor(1000 + Math.random() * 9000),
 		item: '',
 		editItem: false,
-		curTime : 0
+		curTime: 0,
 	};
 
 	onInputChange = (e) => {
-		this.setState ({
+		this.setState({
 			item: e.target.value,
-			curTime: new Date().toLocaleTimeString('en-US', { hour12: false, 
-				hour: "numeric", 
-				minute: "numeric"})
+			curTime: new Date().toLocaleTimeString('en-US', {
+				hour12: false,
+				hour: 'numeric',
+				minute: 'numeric',
+			}),
 		});
-		
 	};
 
 	handleSubmit = (e) => {
@@ -31,18 +33,51 @@ class App extends React.Component {
 		const newItem = {
 			id: this.state.id,
 			title: this.state.item,
-			Time : this.state.curTime
+			Time: this.state.curTime,
 		};
 
 		const updatedItems = [...this.state.items, newItem];
-		console.log(updatedItems);
 
 		this.setState({
 			items: updatedItems,
-			item: " ",
-			id:  Math.floor(1000 + Math.random() * 9000),
+			item: ' ',
+			id: Math.floor(1000 + Math.random() * 9000),
 			editItem: false,
-			curTime: new Date().toLocaleTimeString()
+			curTime: new Date().toLocaleTimeString(),
+		});
+	};
+	// somehow i am unable to delete the items
+	clearList = () => {
+		const newArr = [];
+		if (this.state.items.length !== 0) {
+			this.setState = {
+				items: newArr,
+			};
+		}
+		console.log(this.state.items);
+	};
+
+	// this func will delele invidual item
+
+	handleDelete = (id) => {
+		const filteredItems = this.state.items.filter((item) => item.id !== id);
+		this.setState({
+			items: filteredItems,
+		});
+	};
+
+	handleEdit = (id) => {
+		console.log(id);
+		const filteredItems = this.state.items.filter((item) => item.id !== id);
+
+		const selectedItem = this.state.items.find((item) => item.id === id);
+		console.log(selectedItem);
+		this.setState({
+			items: filteredItems,
+			item: selectedItem.title,
+			editItem: true,
+			id: id,
+			curTime: new Date().toLocaleTimeString() 
 		});
 	};
 
@@ -58,8 +93,14 @@ class App extends React.Component {
 							item={this.state.item}
 							handleInputChange={this.onInputChange}
 							handleSubmit={this.handleSubmit}
+							editItem={this.state.editItem}
 						/>
-						<ViewGroup items={this.state.items}/>
+						<ViewGroup
+							items={this.state.items}
+							clearList={this.clearList}
+							handleDelete={this.handleDelete}
+							handleEdit={this.handleEdit}
+						/>
 					</div>
 				</section>
 			</div>
