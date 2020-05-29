@@ -1,5 +1,5 @@
 import React from 'react';
-import swal from 'sweetalert'
+import swal from 'sweetalert';
 
 class FormGroup extends React.Component {
 	render() {
@@ -7,8 +7,15 @@ class FormGroup extends React.Component {
 		return (
 			<form
 				className="form_group"
-				onSubmit={(e) => { e.preventDefault()
-					item !== '' ? handleSubmit() :swal('Text Missing','You must continue with some text',"warning" );
+				onSubmit={(e) => {
+					e.preventDefault();
+					item !== ''
+						? handleSubmit()
+						: swal(
+								'Text Missing',
+								'You must continue with some Todo\'s',
+								'warning',
+						  );
 				}}>
 				<input
 					className=" text-input form-control shadow-sm"
@@ -22,7 +29,11 @@ class FormGroup extends React.Component {
 					onClick={() => {
 						item !== ''
 							? handleSubmit()
-							: swal('Text Missing','You must continue with some text',"warning" );
+							: swal(
+									'Text Missing',
+									'You must continue with some text',
+									'warning',
+							  );
 					}}></i>
 				<div className="clearlist text-center">
 					<button

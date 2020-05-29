@@ -6,7 +6,7 @@
     justify-content: center;
 
     .model {
-        height: 80vh;
+        height: auto;
         width: 60vw;
         background-color: $color-bg-white;
         border-radius: 1rem;
@@ -21,7 +21,6 @@
         &_nav {
             background-color: $color-primary-yellow;
             height: 4.5rem;
-            padding: 0 10rem;
 
             a {
                 color: $pixel-dark;
@@ -47,7 +46,7 @@
                 color: $pixel-dark;
                 font-weight: 600;
                 text-transform: capitalize;
-                margin-left: 3.5rem;
+                // margin-left: 3.5rem;
             }
         }
         &_brand {
@@ -85,7 +84,7 @@
         }
 
         .navbar-nav {
-            display: flex;
+            // display: flex;
             flex-direction: row;
             margin-right: 3rem;
         }

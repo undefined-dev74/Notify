@@ -17,8 +17,8 @@ html {
 body {
 	display: grid;
 	// grid-template-columns: repeat(auto-fill, 1fr);
-	height: 85vh;
-	grid-column: 3 / span 4;
+	// height: 85vh;
+	// grid-column: 3 / span 4;
 	background: #ddd6f3; /* fallback for old browsers */
 	background: -webkit-linear-gradient(
 		to right,
@@ -31,7 +31,14 @@ body {
 		#151618
 	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	padding: 0;
+}
 li {
 	list-style: none;
+}
+
+.container-fluid {
+	padding: 0;
 }
