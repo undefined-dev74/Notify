@@ -7,8 +7,8 @@ class FormGroup extends React.Component {
 		const { item, handleInputChange, handleSubmit, editItem } = this.props;
 		return (
 			<Row>
-				<Col className="col-sm-1"></Col>
-				<Col className="col-sm-10">
+				<Col className="col-sm-1 col-xl-3"></Col>
+				<Col className="col-sm-10 col-xl-6">
 					<Container fluid>
 						<form
 							className="form_group"
@@ -51,7 +51,7 @@ class FormGroup extends React.Component {
 						</form>
 					</Container>
 				</Col>
-				<Col className="col-sm-1"></Col>
+				<Col className="col-sm-1 col-xl-3"></Col>
 			</Row>
 		);
 	}
