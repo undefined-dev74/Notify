@@ -6,7 +6,7 @@ export default class ViewList extends React.Component {
 		const { title, timeStamp, deleteItem, editItem } = this.props;
 		return (
 			<Row>
-				<Col className="col-sm-1" xl={3}></Col>
+				<Col sm={1} xl={3}></Col>
 				<Col sm={10} xl={6}>
 					<div className="view shadow-lg">
 						<div className="view-items">
@@ -37,7 +37,7 @@ export default class ViewList extends React.Component {
 						</div>
 					</div>
 				</Col>
-				<Col className="col-sm-1" xl={3}></Col>
+				<Col sm={1} xl={3}></Col>
 			</Row>
 		);
 	}
