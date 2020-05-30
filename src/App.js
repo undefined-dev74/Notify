@@ -98,12 +98,14 @@ class App extends React.Component {
 								</Col>
 							</Row>
 							<Notegroup />
-							<FormGroup
-								item={this.state.item}
-								handleInputChange={this.onInputChange}
-								handleSubmit={this.handleSubmit}
-								editItem={this.state.editItem}
-							/>
+							<Container>
+								<FormGroup
+									item={this.state.item}
+									handleInputChange={this.onInputChange}
+									handleSubmit={this.handleSubmit}
+									editItem={this.state.editItem}
+								/>
+							</Container>
 							<ViewGroup
 								items={this.state.items}
 								clearList={this.clearList}

@@ -1,6 +1,9 @@
 .form_group {
     position: relative;
     width: 40rem;
+    @media (min-width: 576px) { 
+        width: auto;
+     }
     margin: 0 auto;
             
     input.form-control {

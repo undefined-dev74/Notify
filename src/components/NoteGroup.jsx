@@ -6,7 +6,7 @@ class Notegroup extends React.Component {
 			<Row className='mt-sm-4 mt-xl-0'>
 				<Col className='d-sm-none'></Col>
 				<div className="notegroup ">
-					<Col xs={12} className='d-flex justify-content-lg-around justify-content-sm-between align-items-center'>
+					<Col xs={12} className='d-flex justify-content-sm-between align-items-center'>
 					<h1 className="notegroup_headline">Today</h1>
 					<ul className="notegroup_nav">
 						<li className="notegroup_nav-icons">

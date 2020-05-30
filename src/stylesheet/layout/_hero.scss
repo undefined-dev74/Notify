@@ -20,7 +20,7 @@
 
         &_nav {
             background-color: $color-primary-yellow;
-            height: 4.5rem;
+            height: max-content;
 
             a {
                 color: $pixel-dark;
