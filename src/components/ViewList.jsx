@@ -10,7 +10,9 @@ export default class ViewList extends React.Component {
 				<Col sm={10} xl={6}>
 					<div className="view shadow-lg">
 						<div className="view-items">
-							<h3 className="view-items-text"><strong>{title}</strong></h3>
+							<h3 className="view-items-text">
+								<strong>{title}</strong>
+							</h3>
 						</div>
 
 						<div className="view-items">
