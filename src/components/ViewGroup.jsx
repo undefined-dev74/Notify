@@ -5,7 +5,7 @@ import { Container } from 'react-bootstrap';
 
 class ViewGroup extends React.Component {
 	render() {
-		const { items, clearList, handleDelete, handleEdit } = this.props;
+		const { items, clearList, handleDelete, handleEdit, handleFavItem } = this.props;
 		return (
 			<Container fluid>
 				<section className="container">
@@ -17,6 +17,7 @@ class ViewGroup extends React.Component {
 								timeStamp={item.Time}
 								deleteItem={() => handleDelete(item.id)}
 								editItem={() => handleEdit(item.id)}
+								handleFavItem={() =>handleFavItem(item.id)}
 							/>
 						);
 					})}
