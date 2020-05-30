@@ -1,100 +1,96 @@
 .hero {
-    display: grid;
-    grid-column: 2 / span 5;
-    margin-top: 5rem;
-    align-items: start;
-    justify-content: center;
+	display: grid;
+	grid-column: 2 / span 5;
+	margin-top: 5rem;
+	align-items: start;
+	justify-content: center;
 
-    .model {
-        height: auto;
-        width: 60vw;
-        background-color: $color-bg-white;
-        border-radius: 1rem;
+	.model {
+		height: auto;
+		width: 60vw;
+		background-color: $color-bg-white;
+		border-radius: 1rem;
 
-        &_divider {
-            height: 2rem;
-            background-color: $color-primary-yellow-dark;
-            border-top-left-radius: 1rem;
-            border-top-right-radius: 1rem;
-        }
+		&_divider {
+			height: 2rem;
+			background-color: $color-primary-yellow-dark;
+			border-top-left-radius: 1rem;
+			border-top-right-radius: 1rem;
+		}
 
-        &_nav {
-            background-color: $color-primary-yellow;
-            height: max-content;
+		&_nav {
+			background-color: $color-primary-yellow;
+			height: max-content;
 
-            a {
-                color: $pixel-dark;
-                text-decoration: none;
-                background-color: transparent;
-            }
-        }
-        &_form {
+			a {
+				color: $pixel-dark;
+				text-decoration: none;
+				background-color: transparent;
+			}
+		}
+		&_form {
+			div.search_icon {
+				position: relative;
 
-           div.search_icon {
-                position: relative;
+				i {
+					position: absolute;
+					top: 1.2rem;
+					bottom: 0;
+					transform: translate(6.6rem, 0);
+				}
+			}
+			input {
+				font-family: $font-primary;
+				font-size: 1.4rem;
+				color: $pixel-dark;
+				font-weight: 600;
+				text-transform: capitalize;
+				// margin-left: 3.5rem;
+			}
+		}
+		&_brand {
+			font-family: $font-primary;
+			font-weight: 600;
+		}
 
-                i {
-                    position: absolute;
-                    top: 1.2rem;
-                    bottom: 0;
-                    transform: translate(6.6rem, 0);
-                }
-            }
-            input {
-                font-family: $font-primary;
-                font-size: 1.4rem;
-                color: $pixel-dark;
-                font-weight: 600;
-                text-transform: capitalize;
-                // margin-left: 3.5rem;
-            }
-        }
-        &_brand {
-            font-family: $font-primary;
-            font-weight: 600;
-        }
+		&_search {
+			width: 100%;
+			font-size: 1.3rem;
+			line-height: 1.5rem;
+			border-radius: 3rem;
+			padding: 1rem 6rem 1rem 8rem;
+			background-color: $color-primary-yellow-dark;
+			border: none;
 
-        &_search {
-            width: 100%;
-            font-size: 1.3rem;
-            line-height: 1.5rem;
-            border-radius: 3rem;
-            padding: 1rem 6rem 1rem 8rem;
-            background-color: $color-primary-yellow-dark;
-            border: none;
+			&:focus,
+			&:active {
+				outline: none;
+				background-color: inherit;
+				border: none;
+			}
 
-            &:focus,
-            &:active {
-                outline: none;
-                background-color: inherit;
-                border: none;
+			&::placeholder {
+				text-align: start;
+				color: $pixel-dark;
+				font-family: $font-primary;
+				font-weight: 400;
+				padding: 0;
+				text-align: center;
+			}
+		}
 
-            }
+		.navbar-nav {
+			// display: flex;
+			flex-direction: row;
+			margin-right: 3rem;
+		}
 
-            &::placeholder {
-                text-align: start;
-                color: $pixel-dark;
-                font-family: $font-primary;
-                font-weight: 400;
-                padding: 0;
-                text-align: center;
-            }
+		.navbar-brand {
+			font-size: 1.35rem;
+		}
 
-            
-        }
-
-        .navbar-nav {
-            // display: flex;
-            flex-direction: row;
-            margin-right: 3rem;
-        }
-
-        .navbar-brand {
-            font-size: 1.35rem;
-        }
-
-        .nav-item {
-            margin-right: 2.1rem;
-        }
-    }
+		.nav-item {
+			margin-right: 2.1rem;
+		}
+	}
 }

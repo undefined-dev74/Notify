@@ -4,9 +4,9 @@
 	background-clip: border-box;
 	background-color: $smoke-white;
 	width: 40rem;
-	@media (min-width: 576px) { 
-        width: auto;
-     }
+	@media (min-width: 576px) {
+		width: auto;
+	}
 	height: auto;
 	color: $pixel-dark;
 	font-family: $font-trisary;

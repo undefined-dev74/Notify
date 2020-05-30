@@ -69,7 +69,7 @@ class App extends React.Component {
 	handleEdit = (id) => {
 		console.log(id);
 		const filteredItems = this.state.items.filter((item) => item.id !== id);
-		
+
 		const selectedItem = this.state.items.find((item) => item.id === id);
 		console.log(selectedItem);
 		this.setState({
@@ -81,10 +81,10 @@ class App extends React.Component {
 		});
 	};
 
-	handleFavItem = id => {
-		const saveFavItem = this.state.items.filter(item => item.id === id)
-		console.log(saveFavItem, "; this item will be saved it fav item list")
-	}
+	handleFavItem = (id) => {
+		const saveFavItem = this.state.items.filter((item) => item.id === id);
+		console.log(saveFavItem, '; this item will be saved it fav item list');
+	};
 
 	render() {
 		return (

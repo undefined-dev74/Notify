@@ -40,14 +40,14 @@ export default class ViewList extends React.Component {
 										Edit
 										<i className="fas fa-pen ml-2"></i>
 									</button> */}
-									<EditOutlined style={{ fontSize: 18 , cursor:'pointer'}} />
+									<EditOutlined style={{ fontSize: 18, cursor: 'pointer' }} />
 								</span>
 								<span className="mx-2 text-info" onClick={deleteItem}>
 									{/* <button className="btn btn-sm btn-danger">
 										Delete
 										<i className="fas fa-trash ml-2"></i>
 									</button> */}
-									<DeleteOutlined style={{ fontSize: 18, cursor:'pointer' }} />
+									<DeleteOutlined style={{ fontSize: 18, cursor: 'pointer' }} />
 								</span>
 								<span className="mx-2 text-danger">
 									<HeartTwoTone
