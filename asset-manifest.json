@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/EditNoter/static/css/main.878caa0a.chunk.css",
+    "main.js": "/EditNoter/static/js/main.d90f0cf5.chunk.js",
+    "main.js.map": "/EditNoter/static/js/main.d90f0cf5.chunk.js.map",
+    "runtime-main.js": "/EditNoter/static/js/runtime-main.8301938a.js",
+    "runtime-main.js.map": "/EditNoter/static/js/runtime-main.8301938a.js.map",
+    "static/css/2.829c9cb5.chunk.css": "/EditNoter/static/css/2.829c9cb5.chunk.css",
+    "static/js/2.1fa5031a.chunk.js": "/EditNoter/static/js/2.1fa5031a.chunk.js",
+    "static/js/2.1fa5031a.chunk.js.map": "/EditNoter/static/js/2.1fa5031a.chunk.js.map",
+    "index.html": "/EditNoter/index.html",
+    "precache-manifest.2fc3e30d9330c3ca038bd6e50411e66b.js": "/EditNoter/precache-manifest.2fc3e30d9330c3ca038bd6e50411e66b.js",
+    "service-worker.js": "/EditNoter/service-worker.js",
+    "static/css/2.829c9cb5.chunk.css.map": "/EditNoter/static/css/2.829c9cb5.chunk.css.map",
+    "static/css/main.878caa0a.chunk.css.map": "/EditNoter/static/css/main.878caa0a.chunk.css.map",
+    "static/js/2.1fa5031a.chunk.js.LICENSE.txt": "/EditNoter/static/js/2.1fa5031a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8301938a.js",
+    "static/css/2.829c9cb5.chunk.css",
+    "static/js/2.1fa5031a.chunk.js",
+    "static/css/main.878caa0a.chunk.css",
+    "static/js/main.d90f0cf5.chunk.js"
+  ]
+}
