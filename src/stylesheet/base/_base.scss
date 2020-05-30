@@ -24,17 +24,10 @@ body {
 	// grid-template-columns: repeat(auto-fill, 1fr);
 	// height: 85vh;
 	// grid-column: 3 / span 4;
-	background: #ddd6f3; /* fallback for old browsers */
-	background: -webkit-linear-gradient(
-		to right,
-		#202020,
-		#151618
-	); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(
-		to right,
-		#202020,
-		#151618
-	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: #ee9ca7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 h1,h2,h3,h4,h5,h6 {
 	margin: 0;
