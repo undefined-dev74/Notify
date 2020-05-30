@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "db0caad1b2472de456b8cddf5097f68e",
+    "revision": "8c3fd8268def01bd942237c2e996739a",
     "url": "/EditNoter/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/EditNoter/static/css/2.829c9cb5.chunk.css"
   },
   {
-    "revision": "5d36e9c28cb3cf56ca8b",
+    "revision": "7154c90e0e70f6be8757",
     "url": "/EditNoter/static/css/main.330f7831.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/EditNoter/static/js/2.1fa5031a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5d36e9c28cb3cf56ca8b",
-    "url": "/EditNoter/static/js/main.80a9083b.chunk.js"
+    "revision": "7154c90e0e70f6be8757",
+    "url": "/EditNoter/static/js/main.0c1d7fe1.chunk.js"
   },
   {
     "revision": "bf1b66dca5f2571b7b73",
