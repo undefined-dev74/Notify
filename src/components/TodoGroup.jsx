@@ -1,16 +1,12 @@
 import React from 'react';
-<<<<<<< HEAD:src/components/ViewGroup.jsx
-import ViewList from './ViewList';
-=======
 import TodoList from './TodoList';
 // import { Divider } from 'antd';
->>>>>>> react-editnoter:src/components/TodoGroup.jsx
 import { Container } from 'react-bootstrap';
 
 class TodoGroup extends React.Component {
 	render() {
 		const {
-			items,git 
+			items,
 			clearList,
 			handleDelete,
 			handleEdit,

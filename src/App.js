@@ -6,10 +6,20 @@ import TodoGroup from './components/TodoGroup';
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 
-import { GlobalProvider } from './context/GlobalState';
 
 
 class App extends React.Component {
+	state = {
+		items: [],
+		id: Math.floor(1000 + Math.random() * 9000),
+		item: '',
+		editItem: false,
+		curTime: new Date().toLocaleTimeString('en-US', {
+			hour12: false,
+			hour: 'numeric',
+			minute: 'numeric',
+		}),
+	};
 	onInputChange = (e) => {
 		this.setState({
 			item: e.target.value,
@@ -50,12 +60,12 @@ class App extends React.Component {
 
 	// this func will delele invidual item
 
-	// handleDelete = (id) => {
-	// 	const filteredItems = this.state.items.filter((item) => item.id !== id);
-	// 	this.setState({
-	// 		items: filteredItems,
-	// 	});
-	// };
+	handleDelete = (id) => {
+		const filteredItems = this.state.items.filter((item) => item.id !== id);
+		this.setState({
+			items: filteredItems,
+		});
+	};
 
 	handleEdit = (id) => {
 		console.log(id);
@@ -79,44 +89,6 @@ class App extends React.Component {
 
 	render() {
 		return (
-<<<<<<< HEAD
-			<GlobalProvider>
-				<div className="App">
-					<section className="hero ">
-						<div className="model ">
-							<Container fluid>
-								<Row>
-									<Col>
-										<div className="model_divider"></div>
-									</Col>
-								</Row>
-								<Row>
-									<Col>
-										<Navbar />
-									</Col>
-								</Row>
-								<Notegroup />
-								<Container>
-									<FormGroup
-										// item={this.state.item}
-										// handleInputChange={this.onInputChange}
-										// handleSubmit={this.handleSubmit}
-										// editItem={this.state.editItem}
-									/>
-								</Container>
-								<ViewGroup
-									// items={this.state.items}
-									// clearList={this.clearList}
-									// handleDelete={this.handleDelete}
-									// handleEdit={this.handleEdit}
-									// handleFavItem={this.handleFavItem}
-								/>
-							</Container>
-						</div>
-					</section>
-				</div>
-			</GlobalProvider>
-=======
 			<div className="App">
 				<section className="hero ">
 					<div className="model ">
@@ -151,7 +123,6 @@ class App extends React.Component {
 					</div>
 				</section>
 			</div>
->>>>>>> react-editnoter
 		);
 	}
 }

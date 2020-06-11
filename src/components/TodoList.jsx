@@ -1,13 +1,7 @@
 import React,{useContext} from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { EditOutlined, HeartTwoTone, DeleteOutlined } from '@ant-design/icons';
-<<<<<<< HEAD:src/components/ViewList.jsx
-export default ViewList =() => {
-
-	const value = useContext(TodoContext);
-=======
 export default class TodoList extends React.Component {
->>>>>>> react-editnoter:src/components/TodoList.jsx
 	render() {
 		const {
 			title,
