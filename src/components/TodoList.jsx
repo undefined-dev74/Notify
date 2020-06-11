@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { EditOutlined, HeartTwoTone, DeleteOutlined } from '@ant-design/icons';
-export default class ViewList extends React.Component {
+export default class TodoList extends React.Component {
 	render() {
 		const {
 			title,
@@ -14,11 +14,11 @@ export default class ViewList extends React.Component {
 			<Row>
 				<Col sm={1} xl={3}></Col>
 				<Col sm={10} xl={6}>
-					<div className="view shadow-lg">
+					<div className="todo shadow-lg">
 						<Row>
 							<Col xl={10}>
-								<div className="view-items">
-									<h3 className="view-items-text">
+								<div className="todo-items">
+									<h3 className="todo-items-text">
 										<strong>{title}</strong>
 									</h3>
 								</div>
@@ -28,12 +28,12 @@ export default class ViewList extends React.Component {
 							</Col>
 						</Row>
 
-						<div className="view-items">
-							<div className="view-items-timeline ">
-								<p className="view-items-timeline-today mr-2">Today</p>
-								<p className="view-items-timeline-time">{timeStamp}</p>
+						<div className="todo-items">
+							<div className="todo-items-timeline ">
+								<p className="todo-items-timeline-today mr-2">Today</p>
+								<p className="todo-items-timeline-time">{timeStamp}</p>
 							</div>
-							<div className="view-items-icons">
+							<div className="todo-items-icons">
 								<div className="icons-list"></div>
 								<span className="mx-2 text-success " onClick={editItem}>
 									{/* <button className="btn btn-sm btn-info px-3">

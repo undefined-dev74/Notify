@@ -2,7 +2,7 @@ import React from 'react';
 import swal from 'sweetalert';
 import { Container, Row, Col } from 'react-bootstrap';
 
-class FormGroup extends React.Component {
+class TodoInput extends React.Component {
 	render() {
 		const { item, handleInputChange, handleSubmit, editItem } = this.props;
 		return (
@@ -11,7 +11,7 @@ class FormGroup extends React.Component {
 				<Col className="col-sm-10 col-xl-6">
 					<Container fluid>
 						<form
-							className="form_group"
+							className="todo_input"
 							onSubmit={(e) => {
 								e.preventDefault();
 								item !== ''
@@ -30,7 +30,7 @@ class FormGroup extends React.Component {
 								type="text"
 								maxLength={80}></input>
 							<i
-								className="form_group-icon addbtn fas fa-2x fa-plus-circle"
+								className="todo_input-icon addbtn fas fa-2x fa-plus-circle"
 								onClick={() => {
 									item !== ''
 										? handleSubmit()
@@ -57,5 +57,5 @@ class FormGroup extends React.Component {
 	}
 }
 
-export default FormGroup;
+export default TodoInput;
 //9555867916 Bam Ji chacha

@@ -1,8 +1,8 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import Notegroup from './components/NoteGroup';
-import FormGroup from './components/FormGroup';
-import ViewGroup from './components/ViewGroup';
+import Timeline from './components/Timeline';
+import TodoInput from './components/TodoInput';
+import TodoGroup from './components/TodoGroup';
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -102,16 +102,16 @@ class App extends React.Component {
 									<Navbar />
 								</Col>
 							</Row>
-							<Notegroup />
+							<Timeline />
 							<Container>
-								<FormGroup
+								<TodoInput
 									item={this.state.item}
 									handleInputChange={this.onInputChange}
 									handleSubmit={this.handleSubmit}
 									editItem={this.state.editItem}
 								/>
 							</Container>
-							<ViewGroup
+							<TodoGroup
 								items={this.state.items}
 								clearList={this.clearList}
 								handleDelete={this.handleDelete}

@@ -1,9 +1,9 @@
 import React from 'react';
-import ViewList from './ViewList';
+import TodoList from './TodoList';
 // import { Divider } from 'antd';
 import { Container } from 'react-bootstrap';
 
-class ViewGroup extends React.Component {
+class TodoGroup extends React.Component {
 	render() {
 		const {
 			items,
@@ -17,7 +17,7 @@ class ViewGroup extends React.Component {
 				<section className="container">
 					{items.map((item) => {
 						return (
-							<ViewList
+							<TodoList
 								key={item.id}
 								title={item.title}
 								timeStamp={item.Time}
@@ -41,4 +41,4 @@ class ViewGroup extends React.Component {
 	}
 }
 
-export default ViewGroup;
+export default TodoGroup;
