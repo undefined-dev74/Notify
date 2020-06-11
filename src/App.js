@@ -1,8 +1,8 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import Notegroup from './components/NoteGroup';
-import FormGroup from './components/FormGroup';
-import ViewGroup from './components/ViewGroup';
+import Timeline from './components/Timeline';
+import TodoInput from './components/TodoInput';
+import TodoGroup from './components/TodoGroup';
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -79,6 +79,7 @@ class App extends React.Component {
 
 	render() {
 		return (
+<<<<<<< HEAD
 			<GlobalProvider>
 				<div className="App">
 					<section className="hero ">
@@ -115,6 +116,42 @@ class App extends React.Component {
 					</section>
 				</div>
 			</GlobalProvider>
+=======
+			<div className="App">
+				<section className="hero ">
+					<div className="model ">
+						<Container fluid>
+							<Row>
+								<Col>
+									<div className="model_divider"></div>
+								</Col>
+							</Row>
+							<Row>
+								<Col>
+									<Navbar />
+								</Col>
+							</Row>
+							<Timeline />
+							<Container>
+								<TodoInput
+									item={this.state.item}
+									handleInputChange={this.onInputChange}
+									handleSubmit={this.handleSubmit}
+									editItem={this.state.editItem}
+								/>
+							</Container>
+							<TodoGroup
+								items={this.state.items}
+								clearList={this.clearList}
+								handleDelete={this.handleDelete}
+								handleEdit={this.handleEdit}
+								handleFavItem={this.handleFavItem}
+							/>
+						</Container>
+					</div>
+				</section>
+			</div>
+>>>>>>> react-editnoter
 		);
 	}
 }
