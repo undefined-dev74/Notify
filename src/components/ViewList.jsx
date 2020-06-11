@@ -1,7 +1,9 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { EditOutlined, HeartTwoTone, DeleteOutlined } from '@ant-design/icons';
-export default class ViewList extends React.Component {
+export default ViewList =() => {
+
+	const value = useContext(TodoContext);
 	render() {
 		const {
 			title,

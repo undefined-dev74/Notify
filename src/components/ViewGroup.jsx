@@ -1,6 +1,5 @@
 import React from 'react';
 import ViewList from './ViewList';
-// import { Divider } from 'antd';
 import { Container } from 'react-bootstrap';
 
 class ViewGroup extends React.Component {
