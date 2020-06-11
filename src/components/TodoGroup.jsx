@@ -10,7 +10,7 @@ import { Container } from 'react-bootstrap';
 class TodoGroup extends React.Component {
 	render() {
 		const {
-			items,
+			items,git 
 			clearList,
 			handleDelete,
 			handleEdit,
