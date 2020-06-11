@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import Notegroup from './components/NoteGroup';
 import FormGroup from './components/FormGroup';
 import ViewGroup from './components/ViewGroup';
-
+import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 
 class App extends React.Component {
@@ -12,23 +12,23 @@ class App extends React.Component {
 		id: Math.floor(1000 + Math.random() * 9000),
 		item: '',
 		editItem: false,
-		curTime: 0,
+		curTime: new Date().toLocaleTimeString('en-US', {
+			hour12: false,
+			hour: 'numeric',
+			minute: 'numeric',
+		}),
 	};
 
 	onInputChange = (e) => {
 		this.setState({
 			item: e.target.value,
-			curTime: new Date().toLocaleTimeString('en-US', {
-				hour12: false,
-				hour: 'numeric',
-				minute: 'numeric',
-			}),
+			curTime: this.state.curTime,
 		});
 	};
 
 	handleSubmit = (e) => {
 		// this will prevent form to reload when we enter input
-		e.preventDefault();
+		// e.preventDefault();
 
 		const newItem = {
 			id: this.state.id,
@@ -43,7 +43,7 @@ class App extends React.Component {
 			item: ' ',
 			id: Math.floor(1000 + Math.random() * 9000),
 			editItem: false,
-			curTime: new Date().toLocaleTimeString(),
+			curTime: this.state.curTime,
 		});
 	};
 	// somehow i am unable to delete the items
@@ -81,26 +81,44 @@ class App extends React.Component {
 		});
 	};
 
+	handleFavItem = (id) => {
+		const saveFavItem = this.state.items.filter((item) => item.id === id);
+		console.log(saveFavItem, '; this item will be saved it fav item list');
+	};
+
 	render() {
 		return (
 			<div className="App">
 				<section className="hero ">
 					<div className="model ">
-						<div className="model_divider"></div>
-						<Navbar />
-						<Notegroup />
-						<FormGroup
-							item={this.state.item}
-							handleInputChange={this.onInputChange}
-							handleSubmit={this.handleSubmit}
-							editItem={this.state.editItem}
-						/>
-						<ViewGroup
-							items={this.state.items}
-							clearList={this.clearList}
-							handleDelete={this.handleDelete}
-							handleEdit={this.handleEdit}
-						/>
+						<Container fluid>
+							<Row>
+								<Col>
+									<div className="model_divider"></div>
+								</Col>
+							</Row>
+							<Row>
+								<Col>
+									<Navbar />
+								</Col>
+							</Row>
+							<Notegroup />
+							<Container>
+								<FormGroup
+									item={this.state.item}
+									handleInputChange={this.onInputChange}
+									handleSubmit={this.handleSubmit}
+									editItem={this.state.editItem}
+								/>
+							</Container>
+							<ViewGroup
+								items={this.state.items}
+								clearList={this.clearList}
+								handleDelete={this.handleDelete}
+								handleEdit={this.handleEdit}
+								handleFavItem={this.handleFavItem}
+							/>
+						</Container>
 					</div>
 				</section>
 			</div>
