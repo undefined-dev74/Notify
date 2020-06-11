@@ -77,7 +77,7 @@ class App extends React.Component {
 			item: selectedItem.title,
 			editItem: true,
 			id: id,
-			curTime: new Date().toLocaleTimeString() 
+			curTime: new Date().toLocaleTimeString(),
 		});
 	};
 
