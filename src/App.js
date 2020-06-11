@@ -60,11 +60,12 @@ class App extends React.Component {
 
 	// this func will delele invidual item
 
-	handleDelete = (id) => {
+	handleDelete = (id, e) => {
 		const filteredItems = this.state.items.filter((item) => item.id !== id);
 		this.setState({
 			items: filteredItems,
 		});
+		if(this.state.items.length ===0) return e.target.value = '';
 	};
 
 	handleEdit = (id) => {
