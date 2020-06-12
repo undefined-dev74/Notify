@@ -111,7 +111,11 @@ class App extends React.Component {
 			return({showFavoriteTodoList:!prevstate.showFavoriteTodoList})
 		})
 	}
-
+// we haven't set git?
+// I have git installed 
+// I have already cloned the repo g
+// we have to set remote repo so that's what i am trying
+// I have already done that
 	render() {
 		return (
 			<div className="App">
