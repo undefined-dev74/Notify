@@ -5,8 +5,7 @@ import TodoInput from './components/TodoInput';
 import TodoGroup from './components/TodoGroup';
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
-
-
+import FavoriteTodoList from './components/FavoriteTodoList/FavoriteTodoList';
 
 class App extends React.Component {
 	state = {
@@ -19,6 +18,8 @@ class App extends React.Component {
 			hour: 'numeric',
 			minute: 'numeric',
 		}),
+		FavoriteItems:[],// This array will store our favorite items 
+		showFavoriteTodoList:false,
 	};
 	onInputChange = (e) => {
 		this.setState({
@@ -86,7 +87,30 @@ class App extends React.Component {
 	handleFavItem = (id) => {
 		const saveFavItem = this.state.items.filter((item) => item.id === id);
 		console.log(saveFavItem, '; this item will be saved it fav item list');
+		const newFavoriteItem = saveFavItem;
+		console.log('new favorite item is ', newFavoriteItem);
+		
+		const OldFavoriteItemList = [...this.state.FavoriteItems];
+		console.log("old Fav item list is" , OldFavoriteItemList);
+
+		const UpdatedFavoriteItemList =[...OldFavoriteItemList,newFavoriteItem].reduce((arr, ele) =>{return arr.concat(ele)},[]);;
+		// we need to change an array of array to a single array 
+		// so we reduced that 
+		
+		console.log('Updated fav itme list i s',UpdatedFavoriteItemList);
+
+		this.setState({
+			FavoriteItems:UpdatedFavoriteItemList
+		})
+
 	};
+
+	// Handle toggling of favorite list 
+	showfavoriteListHandler = () =>{
+		this.setState((prevstate)=>{
+			return({showFavoriteTodoList:!prevstate.showFavoriteTodoList})
+		})
+	}
 
 	render() {
 		return (
@@ -100,8 +124,8 @@ class App extends React.Component {
 								</Col>
 							</Row>
 							<Row>
-								<Col>
-									<Navbar />
+								 <Col>	
+									<Navbar clicked = {this.showfavoriteListHandler}/>
 								</Col>
 							</Row>
 							<Timeline />
@@ -120,6 +144,7 @@ class App extends React.Component {
 								handleEdit={this.handleEdit}
 								handleFavItem={this.handleFavItem}
 							/>
+							<FavoriteTodoList ListItems ={this.state.FavoriteItems} show={this.state.showFavoriteTodoList}/>
 						</Container>
 					</div>
 				</section>

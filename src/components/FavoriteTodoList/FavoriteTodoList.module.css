@@ -1,0 +1,39 @@
+.FavoriteTodoList_cnt{
+    width: 90%;
+    margin: 1rem auto;
+    padding-top: .3rem;
+    box-sizing: border-box;
+    border-radius: 10px;
+    z-index: -2;
+    color: black;
+    box-shadow: inset 4px 4px 4px rgba(0,0,0,0.5);
+    background-image: linear-gradient(15deg, rgb(243, 194, 34) 0,rgb(243, 194, 34) 60%,rgb(235, 184, 18) 50%);
+}
+
+.FavoriteTodoList_cnt .heading{
+    text-align: center;
+    color: white;
+    width: 80%;
+    z-index: 1;
+    position: relative;
+    margin: 0px auto;
+    padding:.5rem 0;
+    background-color: white;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    font-size: 3rem;
+}
+
+.FavoriteTodoList_cnt .heading:before{
+    content: '';
+    height: 100%;
+    width: 50%;
+    z-index: -1;
+    margin: auto 1px;
+    position: absolute;
+    top: 0;
+    left: 25%;
+    transform: skew(40deg);
+    clip: inset rect(0,40%x,0%,40%);
+    background-color: orange;
+}
