@@ -42,7 +42,8 @@ class Navbar extends React.Component {
 									<i className=" fas fa-2x fa-cog"></i>
 								</a>
 							</li>
-							<li className="nav-item" id="notifications">
+							{/* // added functinality to show the favorite list on click */}
+							<li className="nav-item" id="notifications" >
 								<a className="nav-link " href="">
 									<i className=" far fa-2x fa-bell"></i>
 								</a>
@@ -51,6 +52,9 @@ class Navbar extends React.Component {
 								<a className="nav-link " href="">
 									<i className=" fas  fa-2x fa-plus-square"></i>
 								</a>
+							</li>
+							<li className="nav-item nav-link">
+								<i className="fas  fa-2x fa-heart" onClick={this.props.clicked} ></i>
 							</li>
 						</ul>
 					</Col>
