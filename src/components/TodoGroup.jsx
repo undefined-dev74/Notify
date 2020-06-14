@@ -24,6 +24,7 @@ class TodoGroup extends React.Component {
 								deleteItem={() => handleDelete(item.id)}
 								editItem={() => handleEdit(item.id)}
 								handleFavItem={() => handleFavItem(item.id)}
+								FavStatus={item.FavState}
 							/>
 						);
 					})}

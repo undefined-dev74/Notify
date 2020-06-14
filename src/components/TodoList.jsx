@@ -49,13 +49,13 @@ export default class TodoList extends React.Component {
 									</button> */}
 									<DeleteOutlined style={{ fontSize: 18, cursor: 'pointer' }} />
 								</span>
-								<span className="mx-2 text-danger">
-									<HeartTwoTone
-										twoToneColor="#f40552"
-										style={{ fontSize: 18 }}
-										onClick={handleFavItem}                          // favorite list handler
-									/>
-								</span>
+									<span className="mx-2 text-danger">
+										<HeartTwoTone
+											twoToneColor="#f40552"
+											style={{ fontSize: 18 ,}}
+											onClick={!this.props.FavStatus?handleFavItem:()=>{}}
+										/>
+									</span>
 							</div>
 						</div>
 					</div>
