@@ -6,6 +6,7 @@ import TodoGroup from './components/TodoGroup';
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import FavoriteTodoList from './components/FavoriteTodoList/FavoriteTodoList';
+import NotificationBar from './components/NotificationBar/NotificationBar';
 
 class App extends React.Component {
 	state = {
@@ -21,6 +22,7 @@ class App extends React.Component {
 		FavoriteItems:[],// This array will store our favorite items 
 		showFavoriteTodoList:false,
 		DarkFavList:false,
+		ShowNotBar:false,
 	};
 	onInputChange = (e) => {
 		this.setState({
@@ -28,6 +30,14 @@ class App extends React.Component {
 			curTime: this.state.curTime,
 		});
 	};
+
+	NotificationBarToggler  = ()=>{
+		
+		this.setState((prevState)=>{
+			console.log('hi');
+			return{ShowNotBar:!prevState.ShowNotBar}
+		})
+	}
 
 	handleSubmit = (e) => {
 		// this will prevent form to reload when we enter input
@@ -107,6 +117,7 @@ class App extends React.Component {
 			id: id,
 			curTime: new Date().toLocaleTimeString(),
 		});
+
 	};
 	ChangeFavStatus = (id)=>{
 		let OldItems = [...this.state.items];
@@ -181,7 +192,8 @@ class App extends React.Component {
 							</Row>
 							<Row>
 								 <Col>	
-									<Navbar clicked = {this.showfavoriteListHandler}/>
+									<Navbar clicked = {this.showfavoriteListHandler}
+										OpenNotifiBar={this.NotificationBarToggler}/>
 								</Col>
 							</Row>
 							<Timeline />
@@ -207,6 +219,7 @@ class App extends React.Component {
 								EditFavItem = {this.EditFavItemHandler}
 								DarkFavList={this.state.DarkFavList}
 								ChangeTheme={this.ChangetheThemeHandler}/>
+							<NotificationBar show={this.state.ShowNotBar}/>
 						</Container>
 					</div>
 				</section>

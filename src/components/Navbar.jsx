@@ -43,10 +43,11 @@ class Navbar extends React.Component {
 								</a>
 							</li>
 							{/* // added functinality to show the favorite list on click */}
-							<li className="nav-item" id="notifications" >
-								<a className="nav-link " href="">
-									<i className=" far fa-2x fa-bell"></i>
-								</a>
+							<li className="nav-item" id="notifications"
+								 >
+								<li className="nav-link " onClick={this.props.OpenNotifiBar}>
+									<i className=" far fa-2x fa-bell" ></i>
+								</li>
 							</li>
 							<li className="nav-item" id="userpanel">
 								<a className="nav-link " href="">
