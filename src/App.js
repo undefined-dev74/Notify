@@ -6,8 +6,6 @@ import TodoGroup from './components/TodoGroup';
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 
-
-
 class App extends React.Component {
 	state = {
 		items: [],
@@ -65,7 +63,7 @@ class App extends React.Component {
 		this.setState({
 			items: filteredItems,
 		});
-		if(this.state.items.length ===0) return e.target.value = '';
+		if (this.state.items.length === 0) return (e.target.value = '');
 	};
 
 	handleEdit = (id) => {
