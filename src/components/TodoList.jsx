@@ -53,7 +53,7 @@ export default class TodoList extends React.Component {
 									<HeartTwoTone
 										twoToneColor="#f40552"
 										style={{ fontSize: 18 }}
-										onClick={handleFavItem}
+										onClick={handleFavItem}                          // favorite list handler
 									/>
 								</span>
 							</div>
