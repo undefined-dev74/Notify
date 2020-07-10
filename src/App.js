@@ -22,7 +22,7 @@ class App extends React.Component {
 		showFavoriteTodoList:false,
 	};
 	onInputChange = (e) => {
-		this.setState({
+		this.setState ({
 			item: e.target.value,
 			curTime: this.state.curTime,
 		});
