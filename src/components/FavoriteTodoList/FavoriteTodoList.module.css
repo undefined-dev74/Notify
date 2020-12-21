@@ -1,22 +1,91 @@
 .FavoriteTodoList_cnt{
     width: 90%;
+    height: 40vh;
+    overflow-y: auto;
     margin: 1rem auto;
     padding-top: .3rem;
     box-sizing: border-box;
     border-radius: 10px;
     z-index: -2;
+    position: relative;
+    z-index: 1;
     color: black;
     box-shadow: inset 4px 4px 4px rgba(0,0,0,0.5);
     background-image: linear-gradient(15deg, rgb(243, 194, 34) 0,rgb(243, 194, 34) 60%,rgb(235, 184, 18) 50%);
 }
 
-.FavoriteTodoList_cnt .heading{
+
+.EmptyList{
+    font-size: 2rem;
+    color: Red;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
+    height: 20vh;
+    margin-top: 2rem;
+    font-family: cursive;
+    font-weight: bold;
+    background-color: white;
+}
+
+.heading button{
+    font-size: 1rem;
+    margin: 0 1rem;
+    padding: .2rem;
+    border-radius: 4px;
+    outline: none;
+    border:none;
+}
+
+.heading_Dark button{
+    font-size: 1rem;
+    margin: 0 1rem;
+    padding: .2rem;
+    border-radius: 4px;
+    outline: none;
+    border:none;
+}
+.EmptyList_Dark{
+    font-size: 2rem;
+    color: Red;
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
+    height: 20vh;
+    margin-top: 2rem;
+    font-family: cursive;
+    font-weight: bold;
+    background-color: rgb(32, 30, 30);
+}
+
+.EmptyList_Dark:before{
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    z-index: -1;
+    border-radius: 5px;
+    bottom:-1px;
+    transform: skew(.8deg,.8deg);
+    background-image:linear-gradient(315deg,#ff0000,#ffc107);
+}
+ .heading{
     text-align: center;
     color: white;
     width: 80%;
     z-index: 1;
     position: relative;
-    margin: 0px auto;
+    margin: 1rem auto;
     padding:.5rem 0;
     background-color: white;
     box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
@@ -24,7 +93,7 @@
     font-size: 3rem;
 }
 
-.FavoriteTodoList_cnt .heading:before{
+ .heading:before{
     content: '';
     height: 100%;
     width: 50%;
@@ -36,4 +105,60 @@
     transform: skew(40deg);
     clip: inset rect(0,40%x,0%,40%);
     background-color: orange;
+}
+
+
+.FavoriteTodoList_cnt_Dark{
+    width: 90%;
+    height: 40vh;
+    position: relative;
+    overflow-y: auto;
+    margin: 1rem auto;
+    padding-top: .3rem;
+    box-sizing: border-box;
+    border-radius: 10px;
+    z-index: 1;
+    color: rgb(22, 22, 22);
+    box-shadow: inset 4px 4px 4px rgba(0,0,0,0.5);
+    background-color: rgb(22, 22, 22);
+}
+
+ .heading_Dark{
+    text-align: center;
+    width: 80%;
+    position: relative;
+    margin: 1rem auto;
+    padding:0;
+    /* border-radius: 10px; */
+    font-size: 3rem;
+    color: black;
+    z-index: 5;
+    background: rgb(32, 30, 30);
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
+
+}
+.heading_cnt{
+    width: 100%;
+    color: white;
+    height: 101%;
+    border-radius: 5px;
+    padding: 0;
+    background-color: rgb(49, 48, 48);
+}
+
+.heading_Dark:before{
+    content: '';
+    z-index: -1;
+    display: inline-block;
+    position: absolute;
+    border-radius: 5px;
+    /* background-color: rgb(32, 30, 30); */
+    background-image: linear-gradient(to right,red,orange);
+    /* border: 2px solid white; */
+    box-shadow: 0 0 4px black;
+    transform: skew(0.5deg,0.5deg);
+    top: -.1px;
+    left: -.5px;
+    bottom: -.3px;
+    right: -.8px;
 }

@@ -6,6 +6,7 @@ import TodoGroup from './components/TodoGroup';
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import FavoriteTodoList from './components/FavoriteTodoList/FavoriteTodoList';
+import NotificationBar from './components/NotificationBar/NotificationBar';
 
 class App extends React.Component {
 	state = {
@@ -13,20 +14,30 @@ class App extends React.Component {
 		id: Math.floor(1000 + Math.random() * 9000),
 		item: '',
 		editItem: false,
-		curTime: new Date().toLocaleTimeString('en-US', {
-			hour12: false,
-			hour: 'numeric',
-			minute: 'numeric',
-		}),
+		// curTime: new Date().toLocaleTimeString('en-US', {
+		// 	hour12: false,
+		// 	hour: 'numeric',
+		// 	minute: 'numeric',
+		// }),
 		FavoriteItems:[],// This array will store our favorite items 
 		showFavoriteTodoList:false,
+		DarkFavList:false,
+		ShowNotBar:false,
 	};
 	onInputChange = (e) => {
-		this.setState({
+		this.setState ({
 			item: e.target.value,
 			curTime: this.state.curTime,
 		});
 	};
+
+	NotificationBarToggler  = ()=>{
+		
+		this.setState((prevState)=>{
+			console.log('hi');
+			return{ShowNotBar:!prevState.ShowNotBar}
+		})
+	}
 
 	handleSubmit = (e) => {
 		// this will prevent form to reload when we enter input
@@ -35,7 +46,14 @@ class App extends React.Component {
 		const newItem = {
 			id: this.state.id,
 			title: this.state.item,
-			Time: this.state.curTime,
+			// Time: this.state.curTime, // this approch give the time when the state was last updated 
+			// But we want the time when we are making new todo
+			Time:new Date().toLocaleTimeString('en-US', {
+				hour12: false,
+				hour: 'numeric',
+				minute: 'numeric',
+			}),
+			FavState:false,// just to handle addition in fav list only once
 		};
 
 		const updatedItems = [...this.state.items, newItem];
@@ -45,7 +63,7 @@ class App extends React.Component {
 			item: ' ',
 			id: Math.floor(1000 + Math.random() * 9000),
 			editItem: false,
-			curTime: this.state.curTime,
+			// curTime: this.state.curTime,
 		});
 	};
 	// somehow i am unable to delete the items
@@ -59,9 +77,11 @@ class App extends React.Component {
 		console.log(this.state.items);
 	};
 
+	
 	// this func will delele invidual item
 
 	handleDelete = (id, e) => {
+		
 		const filteredItems = this.state.items.filter((item) => item.id !== id);
 		this.setState({
 			items: filteredItems,
@@ -84,21 +104,55 @@ class App extends React.Component {
 		});
 	};
 
+	EditFavItemHandler = (id) => {
+		console.log(id);
+		const filteredItems = this.state.FavoriteItems.filter((item) => item.id !== id);
+
+		const selectedItem = this.state.FavoriteItems.find((item) => item.id === id);
+		console.log(selectedItem);
+		this.setState({
+			FavoriteItems: filteredItems,
+			item: selectedItem.title,
+			editItem: true,
+			id: id,
+			curTime: new Date().toLocaleTimeString(),
+		});
+
+	};
+	ChangeFavStatus = (id)=>{
+		let OldItems = [...this.state.items];
+		let Index;
+		const ReqItem = OldItems.filter((item,index)=>{
+			if(item.id===id)
+			{
+				Index = index;
+				return true;
+			}
+			return false;
+		})// we got an array of single object 
+		console.log('initially fav state', ReqItem[0].FavState);
+		OldItems[Index].FavState=!OldItems[Index].FavState;
+		this.setState({
+			items:OldItems,
+		})
+		console.log('item is ',ReqItem);
+	}
+
 	handleFavItem = (id) => {
+		this.ChangeFavStatus(id);
 		const saveFavItem = this.state.items.filter((item) => item.id === id);
-		console.log(saveFavItem, '; this item will be saved it fav item list');
+		
 		const newFavoriteItem = saveFavItem;
-		console.log('new favorite item is ', newFavoriteItem);
+		console.log('new fav state is ',newFavoriteItem[0].FavState);
 		
 		const OldFavoriteItemList = [...this.state.FavoriteItems];
-		console.log("old Fav item list is" , OldFavoriteItemList);
+		
 
-		const UpdatedFavoriteItemList =[...OldFavoriteItemList,newFavoriteItem].reduce((arr, ele) =>{return arr.concat(ele)},[]);;
+		const UpdatedFavoriteItemList =[...OldFavoriteItemList,newFavoriteItem]
+		.reduce((arr, ele) =>{return arr.concat(ele)},[]);;
 		// we need to change an array of array to a single array 
 		// so we reduced that 
 		
-		console.log('Updated fav itme list i s',UpdatedFavoriteItemList);
-
 		this.setState({
 			FavoriteItems:UpdatedFavoriteItemList
 		})
@@ -111,11 +165,20 @@ class App extends React.Component {
 			return({showFavoriteTodoList:!prevstate.showFavoriteTodoList})
 		})
 	}
-// we haven't set git?
-// I have git installed 
-// I have already cloned the repo g
-// we have to set remote repo so that's what i am trying
-// I have already done that
+
+	DeleteFavItemHandler = (id,e) =>{
+		const filteredItems = this.state.FavoriteItems.filter((item) => item.id !== id);
+		this.setState({
+			FavoriteItems: filteredItems,
+		});
+	}
+
+	ChangetheThemeHandler = ()=>{
+		this.setState((prevState)=>{
+			return {DarkFavList:!prevState.DarkFavList};
+		})
+	}
+
 	render() {
 		return (
 			<div className="App">
@@ -129,7 +192,8 @@ class App extends React.Component {
 							</Row>
 							<Row>
 								 <Col>	
-									<Navbar clicked = {this.showfavoriteListHandler}/>
+									<Navbar clicked = {this.showfavoriteListHandler}
+										OpenNotifiBar={this.NotificationBarToggler}/>
 								</Col>
 							</Row>
 							<Timeline />
@@ -148,7 +212,14 @@ class App extends React.Component {
 								handleEdit={this.handleEdit}
 								handleFavItem={this.handleFavItem}
 							/>
-							<FavoriteTodoList ListItems ={this.state.FavoriteItems} show={this.state.showFavoriteTodoList}/>
+							<FavoriteTodoList 
+								ListItems ={this.state.FavoriteItems} 
+								show={this.state.showFavoriteTodoList}
+								DeleteFavItem = {this.DeleteFavItemHandler}
+								EditFavItem = {this.EditFavItemHandler}
+								DarkFavList={this.state.DarkFavList}
+								ChangeTheme={this.ChangetheThemeHandler}/>
+							<NotificationBar show={this.state.ShowNotBar}/>
 						</Container>
 					</div>
 				</section>
@@ -157,3 +228,5 @@ class App extends React.Component {
 	}
 }
 export default App;
+
+// so now we are making a commit

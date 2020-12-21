@@ -33,7 +33,6 @@ class Navbar extends React.Component {
               </div>
             </div>
           </Col>
-
           <Col
             xs={6}
             lg={3}
