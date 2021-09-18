@@ -25,7 +25,7 @@ class App extends React.Component {
 		ShowNotBar:false,
 	};
 	onInputChange = (e) => {
-		this.setState({
+		this.setState ({
 			item: e.target.value,
 			curTime: this.state.curTime,
 		});
@@ -86,7 +86,7 @@ class App extends React.Component {
 		this.setState({
 			items: filteredItems,
 		});
-		if(this.state.items.length ===0) return e.target.value = '';
+		if (this.state.items.length === 0) return (e.target.value = '');
 	};
 
 	handleEdit = (id) => {
